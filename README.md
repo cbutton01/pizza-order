@@ -11,8 +11,12 @@ _This is a webpage where a customer may design a pizza and see the total price o
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| Cheese Pizza | Cheese Pizza |
-| Cheese Pizza | Cheese Pizza price: $10.00 |
+| Select a type of pizza | Cheese Pizza | Cheese Pizza |
+| Select a type of pizza and display the price | Cheese Pizza | Cheese Pizza price: $10.00 |
+| Select a pizza and the size, price is adjusted for size | Large Cheese Pizza | Large Cheese Pizza price: $13.00 |
+| add toppings to the pizza and adjust price | Large Cheese Pizza with olives | Large Cheese Pizza with olives price: $13.50 |
+| add items to order summary and display total price | Large cheese pizza with olives, small pepperoni pizza price: $17.50 |
+| submit order summary to order receipt and and display it with an estimated delivery time | 1 X large cheese pizza with olives, 1 X small pepperoni pizza price: $17.50 estimated delivery time 45 minutes |
 
 ## Setup/Installation Requirements
 
