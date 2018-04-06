@@ -30,12 +30,12 @@
                       <option value="Veggie">Veggie Pizza</option>
                     </select>
                     <div class="row">
-                    <select id="size" name="">
-                      <option value="Small">Small</option>
-                      <option value="Medium">Medium</option>
-                      <option value="Large">Large</option>
-                    </select>
-                  </div>
+                      <select id="size" name="">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -53,13 +53,13 @@
                     <div class="col-md-4">
                       <div class="btn-group-toggle btn-group-vertical" data-toggle="buttons">
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="pepperoni">pepperoni
+                          <input type="checkbox" name="toppings" value="Pepperoni">pepperoni
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="sausage">sausage
+                          <input type="checkbox" name="toppings" value="Sausage">sausage
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="spicySausage">Spicy Sausage
+                          <input type="checkbox" name="toppings" value="spicy Sausage">Spicy Sausage
                         </div>
                         <div class="item">
                           <input type="checkbox" name="toppings" value="Chorizo">Chorizo
@@ -69,16 +69,16 @@
                     <div class="col-md-4">
                       <div class="btn-group-toggle btn-group-vertical" data-toggle="buttons">
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="bannana">Bannana Peppers
+                          <input type="checkbox" name="toppings" value="Bannana Peppers">Bannana Peppers
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="bell">Bell Peppers
+                          <input type="checkbox" name="toppings" value="Bell Peppers">Bell Peppers
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="jalepenos">Jalepenos
+                          <input type="checkbox" name="toppings" value="Jalepenos">Jalepenos
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="ghost">Ghost Peppers
+                          <input type="checkbox" name="toppings" value="Ghost Peppers">Ghost Peppers
                         </div>
                       </div>
                     </div>
@@ -126,9 +126,10 @@
         <h4  class="card-header text-white bg-danger">Your Order:</h4>
         <div class="card-body">
           <div class="card-text">
-            <ul id="order-items">
+            <ul class="order-items">
 
             </ul>
+            <h6>Order Total: <span id="total"></span></h6>
           </div>
         </div>
         <div class="row">
@@ -139,6 +140,19 @@
             <button class="btn btn-danger shopping" value="place" type="button" name="button">Place Order</button>
           </div>
 
+        </div>
+      </div>
+      <div id="receipt" class="card">
+        <h6 class="card-title">Thank you for your order of:</h6>
+        <div class="card-body">
+          <div class="card-text">
+            <ul class="order-items">
+
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <p>Your order should arrive in <span id="time"></span></p>
         </div>
       </div>
     </div>

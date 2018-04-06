@@ -26,8 +26,15 @@ Pizza.prototype.calculatePrice = function() {
 
 }
 
+function RandomTime (){
+  var random = Math.floor((Math.random() * 60) + 1);
+  return random + ' minutes.';
+}
+
 
 $(document).ready(function(){
+  var orderTotal = 0;
+
   $('#pizza-order').submit(function(event){
     event.preventDefault();
     var pizzaNow = new Pizza($('#choose-pizza').val(), $('#size').val());
@@ -35,17 +42,26 @@ $(document).ready(function(){
       var addTopping = $(this).val();
       pizzaNow.addTopping(addTopping);
     });
+    pizzaNow.calculatePrice();
+    orderTotal += pizzaNow.price;
     $('#pizza-order').fadeOut().hide();
-    $('#order-items').append('<li>' + pizzaNow.size + ' ' +  pizzaNow.type  +' Pizza '+ '<ul>With:<li>'+ pizzaNow.toppings+'</li></ul>' + 'Price: ' +'<strong>'+ pizzaNow.calculatePrice()+ '</strong>' + '</li>')
+    $('.order-items').append('<li>' + pizzaNow.size + ' ' +  pizzaNow.type  +' Pizza '+ '<ul>With:<li>'+ pizzaNow.toppings+'</li></ul>' + 'Price: $' +'<strong>'+ pizzaNow.price.toFixed(2) + '</strong>' + '</li>')
+    $('#total').text('$' + orderTotal.toFixed(2));
     $('#order').fadeIn()
-    console.log(pizzaNow);
     $('.shopping').click(function(event){
       event.preventDefault();
       if ($(this).val() === 'continue') {
         $('#order').fadeOut().hide();
+        $('#pizza-order')[0].reset();
         $('#pizza-order').fadeIn();
       }
+      if($(this).val() === 'place'){
+        event.preventDefault();
+        $('#order').fadeOut().hide();
+        $('#time').text(RandomTime());
+        $('#receipt').fadeIn();
 
+      }
     });
   });
   });

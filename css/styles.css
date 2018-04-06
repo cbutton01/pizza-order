@@ -1,6 +1,6 @@
 body {
   align-items: center;
 }
- #order {
+ #order, #receipt {
    display: none;
  }
