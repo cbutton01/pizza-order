@@ -4,3 +4,8 @@ body {
  #order, #receipt {
    display: none;
  }
+
+button {
+  position: relative;
+  left: 50%;
+}

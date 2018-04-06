@@ -46,7 +46,7 @@ $(document).ready(function(){
     orderTotal += pizzaNow.price;
     $('#pizza-order').fadeOut().hide();
     $('.order-items').append('<li>' + pizzaNow.size + ' ' +  pizzaNow.type  +' Pizza '+ '<ul>With:<li>'+ pizzaNow.toppings+'</li></ul>' + 'Price: $' +'<strong>'+ pizzaNow.price.toFixed(2) + '</strong>' + '</li>')
-    $('#total').text('$' + orderTotal.toFixed(2));
+    $('.total').text('$' + orderTotal.toFixed(2));
     $('#order').fadeIn()
     $('.shopping').click(function(event){
       event.preventDefault();

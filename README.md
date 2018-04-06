@@ -20,7 +20,7 @@ _This is a webpage where a customer may design a pizza and see the total price o
 
 ## Setup/Installation Requirements
 
-* _Clone this repository to your computer_
+* _follow this link: https://cbutton01.github.io/pizza-order/ _
 * _Open index.html in browser_
 
 
