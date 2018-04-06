@@ -39,5 +39,13 @@ $(document).ready(function(){
     $('#order-items').append('<li>' + pizzaNow.size + ' ' +  pizzaNow.type  +' Pizza '+ '<ul>With:<li>'+ pizzaNow.toppings+'</li></ul>' + 'Price: ' +'<strong>'+ pizzaNow.calculatePrice()+ '</strong>' + '</li>')
     $('#order').fadeIn()
     console.log(pizzaNow);
+    $('.shopping').click(function(event){
+      event.preventDefault();
+      if ($(this).val() === 'continue') {
+        $('#order').fadeOut().hide();
+        $('#pizza-order').fadeIn();
+      }
+
+    });
   });
-});
+  });
