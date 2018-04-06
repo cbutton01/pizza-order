@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <form class="form-group" action="index.html" method="post">
+      <form id="piza-order" action="index.html" method="post">
         <div class="row">
           <div class="col-md-6">
             <div class="card">
@@ -19,8 +19,21 @@
                 <h4>Pizza Time</h4>
               </div>
               <div class="card-body">
+                <h5 class="card-title">Choose Your Pizza and Size</h5>
                 <div class="card-text">
-                  <p>ipsum</p>
+                  <div class="row">
+                    <select id="choose-pizza" name="" required>
+                      <option value="blank">Select Your Pizza</option>
+                      <option value="cheese">Cheese Pizza</option>
+                      <option value="sausage">Sausage Pizza</option>
+                      <option value="pepperoni">pepperoni Pizza</option>
+                      <option value="veggie">Veggie Pizza</option>
+                      <option value="Get Out">Vegan Pizza</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <button id="build" type="button" name="button">Build your own</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -31,11 +44,29 @@
                 <h4>Toppings</h4>
               </div>
               <div class="card-body">
+                <h5 class="card-title">Add Some Extra Toppings</h5>
                 <div class="card-text">
                   <p>toppings and such</p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cold-md-1">
+            this is for blank space
+          </div>
+          <div class="cold-md-3">
+            this is for blank space
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-danger" type="submit" name="button"><strong>Add To Order</strong></button>
+          </div>
+          <div class="cold-md-3">
+            this is for blank space
+          </div>
+          <div class="cold-md-1">
+            this is for blank space
           </div>
         </div>
       </form>
