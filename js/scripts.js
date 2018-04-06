@@ -25,3 +25,19 @@ Pizza.prototype.calculatePrice = function() {
   return '$' + this.price.toFixed(2);
 
 }
+
+
+$(document).ready(function(){
+  $('#pizza-order').submit(function(event){
+    event.preventDefault();
+    var pizzaNow = new Pizza($('#choose-pizza').val(), $('#size').val());
+    $('input:checkbox[name=toppings]:checked').each(function(){
+      var addTopping = $(this).val();
+      pizzaNow.addTopping(addTopping);
+    });
+    $('#pizza-order').fadeOut().hide();
+    $('#order-items').append('<li>' + pizzaNow.size + ' ' +  pizzaNow.type  +' Pizza '+ '<ul>With:<li>'+ pizzaNow.toppings+'</li></ul>' + 'Price: ' +'<strong>'+ pizzaNow.calculatePrice()+ '</strong>' + '</li>')
+    $('#order').fadeIn()
+    console.log(pizzaNow);
+  });
+});

@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <form id="piza-order" action="index.html" method="post">
+      <form id="pizza-order" action="index.html" method="post">
         <div class="row">
           <div class="col-md-6">
             <div class="card">
@@ -23,16 +23,19 @@
                 <div class="card-text">
                   <div class="row">
                     <select id="choose-pizza" name="" required>
-                      <option value="blank">Select Your Pizza</option>
-                      <option value="cheese">Cheese Pizza</option>
-                      <option value="sausage">Sausage Pizza</option>
-                      <option value="pepperoni">pepperoni Pizza</option>
-                      <option value="veggie">Veggie Pizza</option>
-                      <option value="Get Out">Vegan Pizza</option>
+                      <option>Select Your Pizza</option>
+                      <option value="Cheese">Cheese Pizza</option>
+                      <option value="Sausage">Sausage Pizza</option>
+                      <option value="Pepperoni">pepperoni Pizza</option>
+                      <option value="Veggie">Veggie Pizza</option>
+                    </select>
+                    <select id="size" name="">
+                      <option value="Small">Small</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Large">Large</option>
                     </select>
                   </div>
                   <div class="row">
-                    <button id="build" type="button" name="button">Build your own</button>
                   </div>
                 </div>
               </div>
@@ -50,52 +53,52 @@
                     <div class="col-md-4">
                       <div class="btn-group-toggle btn-group-vertical" data-toggle="buttons">
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Bannana Peppers
+                          <input type="checkbox" name="toppings" value="pepperoni">pepperoni
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Bell Peppers
+                          <input type="checkbox" name="toppings" value="sausage">sausage
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Spicy Sausage
+                          <input type="checkbox" name="toppings" value="spicySausage">Spicy Sausage
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Chorizo
+                          <input type="checkbox" name="toppings" value="Chorizo">Chorizo
                         </div>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="btn-group-toggle btn-group-vertical" data-toggle="buttons">
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Bannana Peppers
+                          <input type="checkbox" name="toppings" value="bannana">Bannana Peppers
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Bell Peppers
+                          <input type="checkbox" name="toppings" value="bell">Bell Peppers
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Spicy Sausage
+                          <input type="checkbox" name="toppings" value="jalepenos">Jalepenos
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Chorizo
+                          <input type="checkbox" name="toppings" value="ghost">Ghost Peppers
                         </div>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="btn-group-toggle btn-group-vertical" data-toggle="buttons">
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Bannana Peppers
+                          <input type="checkbox" name="toppings" value="anchovies">Anchovies
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Bell Peppers
+                          <input type="checkbox" name="toppings" value="sardines">Sardines
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Spicy Sausage
+                          <input type="checkbox" name="toppings" value="mushrooms">Mushrooms
                         </div>
                         <div class="item">
-                          <input type="checkbox" name="toppings" value="">Chorizo
+                          <input type="checkbox" name="toppings" value="onion">Onion
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div><!-- toppings -->
                 </div>
               </div>
             </div>
@@ -119,6 +122,25 @@
           </div>
         </div>
       </form>
+      <div id="order" class="card">
+        <h4  class="card-header text-white bg-danger">Your Order:</h4>
+        <div class="card-body">
+          <div class="card-text">
+            <ul id="order-items">
+
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <button class="btn btn-success" id="continue" type="button" name="button">Continue Shopping</button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-danger" id="place" type="button" name="button">Place Order</button>
+          </div>
+
+        </div>
+      </div>
     </div>
   </body>
   </html>
